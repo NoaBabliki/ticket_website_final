@@ -34,9 +34,10 @@ Add a hide button that will hide the tickets from view. Make sure there is an op
 use "Hide" and "Restore" for those buttons respectively.
 ![hide tickets](https://d2x3xhvgiqkx42.cloudfront.net/3d412e82-d97e-487e-b1a3-41a6bd24a05b/b9bd9ddb-c0bf-4b55-888e-747f0d6524c8/2019/09/27/233c0170-fd67-4fb5-92c1-54de14d71350/b653f595-a0b7-4233-9259-a8b3d8d1d271.gif)
 
-# I chose to give the option to restore all tickets, or restore all tickets in the current page
-# current page also depents on search words / strings (as will be explained in part 3)
-# so for examle, a user can restore all tickets that has the word "tree" in them (content/title)
+# MY SOLUTION:
+I chose to give the option to restore all tickets, or restore all tickets in the current page
+current page also depents on search words / strings (as will be explained in part 3)
+so for examle, a user can restore all tickets that has the word "tree" in them (content/title)
 
 1c.
  Add a way for users to resize the texts inside the list to 3 states:
@@ -46,8 +47,9 @@ use "Hide" and "Restore" for those buttons respectively.
 2. Apply the changes to our list on every click when the default should be normal
 3. Make sure you can't choose an already chosen state
 
-# added as a component: FontResizer
-# button that is selected become disabled
+# MY SOLUTION
+added as a component: FontResizer
+button that is selected become disabled
 
 
 ### Part 2 - List functionality
@@ -60,22 +62,23 @@ Checking the data, that ticket does exist...
 1.Add a query param `?search=` to the `/tickets` API call and implement it on the server side.
 2.Connect your client side search bar to that API call
 
-# added a param "search" to the api call in "api"
-# the search param is an array, will explain in part 3
-# passed it from the "client" side to the server side
-# in server side, used it to filter tickets
+# MY SOLUTION
+added a param "search" to the api call in "api"
+the search param is an array, will explain in part 3
+passed it from the "client" side to the server side
+in server side, used it to filter tickets
 
 2b. We're showing only 20 tickets but agents can swear there are more. Solve this problem.  
 **Keep in mind the number of tickets is planned to grow exponentially very soon so make sure to think of a proper solution.**
 
-#pages!
+# MY SOLUTION
 #added another param: page
 #used the already written page query
 #used the already written paginate tickets
 #added a component to client side: PageManager to move to next/previus page and see current page number
 #added option to see how many hidden tickets are in the current page and restore all hidden ticket in the current page
 #when there are no search results, show a message
-# down-side: when: overallNumberOfTicket % pageSize == 0 => the last page will be an empty page (instead of no page). solved at latest version
+#down-side: when: overallNumberOfTicket % pageSize == 0 => the last page will be an empty page (instead of no page). solved at latest version
 
 ### Part 3 - Your extra touch
 Think of a small addition to this project and make it happen. If you need inspiration, you can check out our real ticketing app at https://wix.com/wixanswers and grab some ideas from there ;)
