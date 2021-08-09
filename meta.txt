@@ -1,0 +1,3 @@
+examKey=33
+createdAt=2/27/2021
+candidateEmail=rainsof94@gmail.com
