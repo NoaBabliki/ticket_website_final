@@ -1,4 +1,4 @@
-# Ticket website 7-days project
+# Ticket website 7-days project (wix)
 
 extend and add new features to a simplified ticketing system.
 The task's main purpose is to test your ability to learn new topics and deliver high quality digital products. It combines building UI components and a touch of server development as well.
