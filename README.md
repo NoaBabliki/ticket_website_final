@@ -1,7 +1,6 @@
-# Wix FED Entry Level Exam
+# Ticket website 7-days project
 
-Hi there!  
-In this exam you will extend and add new features to a simplified ticketing system.
+extend and add new features to a simplified ticketing system.
 The task's main purpose is to test your ability to learn new topics and deliver high quality digital products. It combines building UI components and a touch of server development as well.
 
 While no previous background is required to complete this task or to apply to this position, we do recommend getting to a basic level on the following subjects:
@@ -19,10 +18,8 @@ You should now have the development version running on your computer and accessi
 
 ## Tasks
 
-The exam is split into 3 parts. The first part is about adding UI functionality. The second part goes a bit broader into the client-server integration and business logic.
+The project is split into 3 parts. The first part is about adding UI functionality. The second part goes a bit broader into the client-server integration and business logic.
 The third part is about creativity and good "big-picture" intuition. 
-
-**Note that 1d and 2c are bonus tasks**
 
 ### Part 1 - Ticket item improvements
 
@@ -39,7 +36,7 @@ use "Hide" and "Restore" for those buttons respectively.
 
 # I chose to give the option to restore all tickets, or restore all tickets in the current page
 # current page also depents on search words / strings (as will be explained in part 3)
-# so fore examle, a user can restore all tickets that has the word "wix" in them (content/title)
+# so for examle, a user can restore all tickets that has the word "tree" in them (content/title)
 
 1c.
  Add a way for users to resize the texts inside the list to 3 states:
@@ -53,11 +50,6 @@ use "Hide" and "Restore" for those buttons respectively.
 # button that is selected become disabled
 
 
-#### 1D - Bonus Task
-1d. **Bonus** Step *a* wasn't enough - some tickets have long content. Add a show more / show less functionality when the content exceeds 3 lines, as following:  
-![show more/less](https://d2x3xhvgiqkx42.cloudfront.net/3d412e82-d97e-487e-b1a3-41a6bd24a05b/b9bd9ddb-c0bf-4b55-888e-747f0d6524c8/2019/09/27/fd41c164-d566-471e-9723-e785b313845a/738cbaa0-93e8-4f02-861d-6fab92c608bd.gif)  
- 
-
 ### Part 2 - List functionality
 
 2a. 
@@ -68,7 +60,6 @@ Checking the data, that ticket does exist...
 1.Add a query param `?search=` to the `/tickets` API call and implement it on the server side.
 2.Connect your client side search bar to that API call
 
-# I really hope I got this right:
 # added a param "search" to the api call in "api"
 # the search param is an array, will explain in part 3
 # passed it from the "client" side to the server side
@@ -84,17 +75,7 @@ Checking the data, that ticket does exist...
 #added a component to client side: PageManager to move to next/previus page and see current page number
 #added option to see how many hidden tickets are in the current page and restore all hidden ticket in the current page
 #when there are no search results, show a message
-# down-side: when: overallNumberOfTicket % pageSize == 0 => the last page will be an empty page (instead of no page). did not manage to solve this by now :(
-
-#### 2c - Bonus Task
-There is a need to find tickets created before/after a certain date, and our designer is on vacation to design proper UI for it. Change the search functionality so that when searching for `after:27/09/2019 api`, only tickets matching the word "api" created *after* 27/09/2019 will show. Add support for `before:[DATE]` and `from:[EMAIL]` as well.  
-
-#### 2d - Bonus Task
-We're doing great, the system now has more than 10M tickets but with success comes challenges and search became unbearable.
-**Keep in mind the number of tickets is planned to grow exponentially very soon so make sure to think of a proper solution.**	We even had a complaint from an agent that told us he waited for a response more than 5 minutes, that's just CRAZY!
-Let's create a search mechanism on steroids.
-1.Add q query param `?superSearch=` to the `/tickets` API call and implement an *efficient* search solution, that gets a word as an input and return an array of matching tickets.
-2. Connect your client side search bar to that API call
+# down-side: when: overallNumberOfTicket % pageSize == 0 => the last page will be an empty page (instead of no page). solved at latest version
 
 ### Part 3 - Your extra touch
 Think of a small addition to this project and make it happen. If you need inspiration, you can check out our real ticketing app at https://wix.com/wixanswers and grab some ideas from there ;)
@@ -102,7 +83,7 @@ It should involve adding something to the UI, or server (or both!).
 A good rule of thumb for the effort here is that it should not exceed the time that it took you to perform Part 2.  
 *Please describe the feature you've added on your email back to us*
 
-
+# MY SOLUTION:
 === More intuitive search ==== 
 I changed the search to be more intuitive by adding option to search by words or strings:
 examples:
@@ -120,10 +101,6 @@ I did this becouse I thought the user will like to know why a particular ticket 
 
 down-side: no highliting special cherecters
 
-===overall===
-I started this exam not knowing nothing about javascript / react / HTML besides "hellow world" and "alert"
-I enjoyed it a lot and learned a lot, this was a cool exrecise. hope my work is decent.
-
 *Note:* this step is also mandatory.
 
 ## General notes
@@ -131,15 +108,3 @@ I enjoyed it a lot and learned a lot, this was a cool exrecise. hope my work is 
 - Stick to the best practices of the libraries used as much as possible
 - This task involves both client and server code. Regardless of bonuses and part 3, in the end you should have touched both areas. If you haven't - you probably are not covering all our requirements.
 - If you have any questions regarding the task itself or its environment, feel free to ask in the exam's e-mail. For general coding / technology questions, please consult stack overflow, forums and other sources of your choice.
-
-
-## Submitting
-
-1. Replace `yours@email.com` with your real email address in the `meta.txt` file.
-2. Delete any `node_modules` directory from the project.
-3. Zip the root directory (`entry-level-exam`) to a file called `entry-level-exam_{yourname}.zip` and send it back to the email you got from us. 
-4. You can describe your extra touch (part 3), and any general notes you may have.
-   Can be anything from challenges to something you feel was not done perfect,
-   to something you're specially proud of.
-
-![good luck](https://media.giphy.com/media/12XDYvMJNcmLgQ/giphy.gif)
